@@ -1,28 +1,18 @@
-var rate;
-var rateAmount;
-var daychange;
-
-
-
 $(document).ready(function() {
 
-    $("#inputCur").change( function(){
-        var currencytest = $(this).children("option:selected").val();
-        console.log(currencytest);
-    });
+    var rate;
+    var rateAmount;
+    var daychange;
     
     // function to access euro/usd api
     $("#exchangeCur").on("click", function() {
 
-        // currency to convert variables
-        var currency1 = "EUR";
-        var currency2 = "usd";
-        // amount user would like to convert, set to 1 as default to show rate
-        var amount = "1"
-        // var amount = $("amount").val().trim();
-        // convert from currency1 to currency
+        var currency1 = $("#inputCur").children("option:selected").val();
+        var currency2 = $("#inputCur2").children("option:selected").val();
+        var amount = $("#curAmount").val();
+
         // using api: https://rapidapi.com/natkapral/api/currency-converter5
-        var queryURL = 	"https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=" + currency1 +"&to=" + currency2 + "&amount=" + amount;
+        var queryURL = 	"https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=" + currency1 + "&to=" + currency2 + "&amount=" + amount;
         
         // passed to $.ajax to recieve response
         var settings = {
@@ -44,7 +34,7 @@ $(document).ready(function() {
             rate = currencyData.rates.USD.rate;
             rateAmount = currencyData.rates.USD.rate_for_amount;
             console.log(rate);
-            console.log(amount);
+            console.log(rateAmount);
 
 
         }
@@ -54,11 +44,10 @@ $(document).ready(function() {
 
     $("#exchangeCry").on("click", function() {
 
-        // currency to convert variables
-        var currency1 = "bitcoin";
-        var currency2 = "usd";
-        // amount user would like to convert, set to 1 as default to show rate
-        var amount = "1"
+        var currency1 = $("#inputCur").children("option:selected").val();
+        var currency2 = $("#inputCur2").children("option:selected").val();
+        var amount = $("#curAmount").val();
+
         // var amount = $("amount").val().trim();
         // Boolean to view last 24 hours
         var history = "true"

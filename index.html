@@ -37,29 +37,29 @@
         <div class="input-group-prepend">
           <select id="inputCur" class="form-control">
             <option selected>Currency 1</option>
-            <option value = "EUR">EUR</option>
-            <option value = "YEN">YEN</option>
+            <option value = "EUR">EURO</option>
+            <option value = "JPY">JAPANESE YEN</option>
           </select>
-          
-
           </div>
         </div>
-        <input type="text" class="form-control" aria-label="Text input with dropdown button">
-      </div>
-      
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" aria-label="Text input with dropdown button">
-        <div class="input-group-append">
-          <select id="inputCur" class="form-control">
-            <option selected>Currency 2</option>
-            <option>PES</option>
-            <option>USD</option>
-          </select>
 
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <select id="inputCur2" class="form-control">
+              <option selected>Currency 2</option>
+              <option value = "MXN"> MEXICAN PESO</option>
+              <option value = "USD">USD</option>
+            </select>
+            </div>
           </div>
         </div>
-      </div>
+
+        <div class="form-group">
+          <label for="Amount">Amount to be converted</label>
+          <input class="form-control" id="curAmount" rows="1"></input>
+        </div>
     </div>
+      
 
     <div class="container">
       <input class="btn btn-primary btn-lg btn-block" id="exchangeCur" type="submit" value="Exchange!">

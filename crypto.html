@@ -24,10 +24,10 @@
     <div class="container mb-4">
       <ul class="nav nav-pills nav-fill justify-content-center">
         <li class="nav-item">
-          <a class="nav-link active" href="index.html">Currencies</a>
+          <a class="nav-link" href="index.html">Currencies</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="crypto.html">Cryptocurrencies</a>
+          <a class="nav-link active" href="crypto.html">Cryptocurrencies</a>
         </li>
       </ul>
     </div>
@@ -35,27 +35,31 @@
     <div class="container">
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-          <div class="dropdown-menu" id="currency">
-            <a class="dropdown-item" href="#">Bitcoin</a>
-            <a class="dropdown-item" href="#">Litecoin</a>
+          <select id="inputCur" class="form-control">
+            <option selected>Currency 1</option>
+            <option value = "Bitcoin">Bitcoin</option>
+            <option value = "LiteCoin">Litecoin</option>
+          </select>
+          </div>
+        </div>
 
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <select id="inputCur2" class="form-control">
+              <option selected>Currency 2</option>
+              <option value = "MXN">PESO</option>
+              <option value = "USD">USD</option>
+            </select>
+            </div>
           </div>
         </div>
-        <input type="text" class="form-control" aria-label="Text input with dropdown button">
-      </div>
-      
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" aria-label="Text input with dropdown button">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">USD</a>
-            <a class="dropdown-item" href="#">EUR</a>
-          </div>
+
+        <div class="form-group">
+          <label for="Amount">Amount to be converted</label>
+          <input class="form-control" id="curAmount" rows="1"></input>
         </div>
-      </div>
     </div>
+      
 
     <div class="container">
       <input class="btn btn-primary btn-lg btn-block" id="exchangeCry" type="submit" value="Exchange!">
