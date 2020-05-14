@@ -3,12 +3,19 @@ var rateAmount;
 var daychange;
 
 
+
 $(document).ready(function() {
+
+    $("#inputCur").change( function(){
+        var currencytest = $(this).children("option:selected").val();
+        console.log(currencytest);
+    });
+    
     // function to access euro/usd api
-    $("#euroUSDBtn").on("click", function() {
+    $("#exchangeCur").on("click", function() {
 
         // currency to convert variables
-        var currency1 = "eur";
+        var currency1 = "EUR";
         var currency2 = "usd";
         // amount user would like to convert, set to 1 as default to show rate
         var amount = "1"
@@ -45,7 +52,7 @@ $(document).ready(function() {
 
 
 
-    $("#btcUSDBtn").on("click", function() {
+    $("#exchangeCry").on("click", function() {
 
         // currency to convert variables
         var currency1 = "bitcoin";
@@ -80,7 +87,6 @@ $(document).ready(function() {
             rate = cryptoData.bitcoin.usd;
             rateAmount = rate*amount;
             daychange = cryptoData.bitcoin.usd_24h_change;
-            console.log(rate);
 
         }
     });

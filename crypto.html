@@ -35,12 +35,10 @@
     <div class="container">
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <select id="inputCur" class="form-control">
-            <option selected>Currency 1</option>
-            <option value = "EUR">EUR</option>
-            <option value = "YEN">YEN</option>
-          </select>
-          
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+          <div class="dropdown-menu" id="currency">
+            <a class="dropdown-item" href="#">Bitcoin</a>
+            <a class="dropdown-item" href="#">Litecoin</a>
 
           </div>
         </div>
@@ -50,19 +48,17 @@
       <div class="input-group mb-3">
         <input type="text" class="form-control" aria-label="Text input with dropdown button">
         <div class="input-group-append">
-          <select id="inputCur" class="form-control">
-            <option selected>Currency 2</option>
-            <option>PES</option>
-            <option>USD</option>
-          </select>
-
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">USD</a>
+            <a class="dropdown-item" href="#">EUR</a>
           </div>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <input class="btn btn-primary btn-lg btn-block" id="exchangeCur" type="submit" value="Exchange!">
+      <input class="btn btn-primary btn-lg btn-block" id="exchangeCry" type="submit" value="Exchange!">
   </div>
 
 </body>
