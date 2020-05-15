@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buy Buy Buy</title>
   <link rel="stylesheet" href="assets/buy.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="assets/buy.js"></script>
   <link rel="stylesheet" type="text/css" href="assets/reset.css">
+
 
 </head>
 
@@ -16,8 +18,10 @@
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Buy Buy Buy Money Conversion Website</h1>
-      <p class="lead">Convert any currency value amount into US Dollar, Euro or Bitcoin.</p>
+      <h1 class="display-4">Buy or Sell Indicator</h1>
+      <!-- <p class="lead">Convert any currency value amount into US Dollar, Euro or Bitcoin.</p> --> 
+      <!-- changed above to below for now -->
+      <p class="lead"> See the following exchange rates, and check whether now is a good time to buy or sell </p>
     </div>
   </div>
   <h2>Current Currency Exchange Rates</h2>
@@ -27,6 +31,10 @@
     <div class="p-2 bd-highlight">EUR to BTC is 1=0.00012</div>
   </div>
   
+  <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+    Popover on top
+  </button>
+
 <div id="buttons">
   <button class="glow-on-hover" href="this would be the link for the button" type="button1">EUR/USD</button>
 
