@@ -1,24 +1,27 @@
 /* pulled colorful buttons from: https://codepen.io/kocsten/pen/rggjXp */
 
 html,
-h1, h2, .buttons {
+h1 {
     text-align: center;
+    margin-top: -20px;
 }
 
 body {
-<<<<<<< HEAD
     background: #000;
     color: white; /* Spencer: added in */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Spencer: added in */
-=======
-    background;
-    color: white; /* added in */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* added in */
->>>>>>> d0521becb269507a9268b40b089f49ffc638a640
 }
-.jumbotron {background-color: #007bff;}
 
-<<<<<<< HEAD
+.jumbotron {
+    background-color: #007bff;
+    height: 175px; 
+}
+
+.nav-link {
+    background-color:white;
+
+}
+
 .btn {
     width: 220px;
     height: 50px;
@@ -30,7 +33,7 @@ body {
     position: relative;
     z-index: 0;
     border-radius: 10px;
-    margin-top: 35px; /* Spencer: added this in to create more separation */
+    margin-top: 10px; /* Spencer: added this in to create more separation */
 }
 
 .btn:before {
@@ -58,7 +61,7 @@ body {
     background: transparent;
 }
 
-.btn:before {
+.btn:hover:before {
     opacity: 1;
 }
 
@@ -73,9 +76,10 @@ body {
     top: 0;
     border-radius: 10px;
 }
-=======
-.form-group {color:#007bff;
-width:25%}
->>>>>>> d0521becb269507a9268b40b089f49ffc638a640
 
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
 

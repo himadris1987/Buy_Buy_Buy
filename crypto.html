@@ -33,6 +33,7 @@
     </div>
 
     <div class="container">
+      <div class="row">
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <select id="inputCurCry" class="form-control">
@@ -55,26 +56,34 @@
           </div>
         </div>
 
+        <div class="col-md-4">
         <div class="form-group">
           <!-- TODO: Need to error check parse Num only -->
           <label for="Amount">Amount to be converted</label>
           <input class="form-control" id="curAmount" rows="1"></input>
         </div>
     </div>
-    
+
+    <div class="col-md-4">
     <div class="form-group">
       <label for ="Output">Converted Amount</label>
       <imput class ="form-control" id="convAmount" rows="1"></imput>
     </div>
+    </div>
 
+    <div class="col-md-4">
     <div class="form-group">
       <label for ="Output">Conversion Rates</label>
       <imput class ="form-control" id="Rate" rows="1"></imput>
     </div>
+    </div>
 
     <div class="container">
-      <input class="btn btn-primary btn-lg btn-block" id="exchangeCry" type="submit" value="Exchange!">
-  </div>
+      <!-- <input class="btn btn-primary btn-lg btn-block" id="exchangeCry" type="submit" value="Exchange!"> -->
+      <!-- Spencer greened out original button above ^ -->
+      <button class="btn" id="exchangeCur" type="submit" value="Exchange!" href="this would be the link for the button">See Exchange Rate!</button>
+       
+    </div>
 
 </body>
 </html>
