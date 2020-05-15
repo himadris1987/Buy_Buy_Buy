@@ -3,7 +3,40 @@ $(document).ready(function() {
     var rate;
     var rateAmount;
     var daychange;
-    
+
+    // Checks for Currency Converter available currencies to populate input
+    function updateSelector() {
+        
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://currency-converter5.p.rapidapi.com/currency/list?format=json",
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "currency-converter5.p.rapidapi.com",
+                "x-rapidapi-key": "2baeb4eca6mshb648eeb18d253bdp1392e1jsnf42824529a45"
+            }
+        }
+        
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            var $dropdown = $("#inputCur");
+            $.each(response.currencies, function(key, value) {
+                $dropdown.append($("<option />").val(key).text(value))
+            });
+        });
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            var $dropdown = $("#inputCur2");
+            $.each(response.currencies, function(key, value) {
+                $dropdown.append($("<option />").val(key).text(value))
+            });
+        });
+    };
+
+    updateSelector();
+
     // function to access euro/usd api
     $("#exchangeCur").on("click", function() {
 
@@ -37,7 +70,7 @@ $(document).ready(function() {
             console.log(rateAmount);
 
 
-        }
+        };
     });
 
 
