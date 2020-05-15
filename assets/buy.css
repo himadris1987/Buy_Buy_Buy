@@ -7,7 +7,7 @@ h1 {
 }
 
 body {
-    background: #000;
+    background:white
     color: white; /* Spencer: added in */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Spencer: added in */
 }
@@ -15,6 +15,7 @@ body {
 .jumbotron {
     background-color: #007bff;
     height: 175px; 
+    color:white
 }
 
 .nav-link {
@@ -27,7 +28,7 @@ body {
     height: 50px;
     border: none;
     outline: none;
-    color: #fff;
+    color:#007bff;
     background: #111;
     cursor: pointer;
     position: relative;
@@ -76,7 +77,11 @@ body {
     top: 0;
     border-radius: 10px;
 }
-
+#instructions {color: #007bff}
+label {color:#007bff}
+button {color:#007bff}
+footer {text-align: center;
+color:#007bff }
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
