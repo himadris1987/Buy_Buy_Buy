@@ -36,6 +36,7 @@
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <select id="inputCur" class="form-control">
+            <!-- Populated with updateSelector() -->
             <option selected>Currency 1</option>
           </select>
           </div>
@@ -44,6 +45,7 @@
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <select id="inputCur2" class="form-control">
+              <!-- Populated with updateSelector() -->
               <option selected>Currency 2</option>
             </select>
             </div>
@@ -52,6 +54,7 @@
 
         <div class="form-group">
           <label for="Amount">Amount to be converted</label>
+          <!-- TODO: Need to error check parse Num only -->
           <input class="form-control" id="curAmount" rows="1"></input>
         </div>
     </div>

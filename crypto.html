@@ -36,7 +36,9 @@
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <select id="inputCurCry" class="form-control">
-            <option selected>Currency 1</option>
+            <option selected>Cryptocurrency</option>
+            <!-- Hardcoded options because populating them with GET would be too many
+              TODO: Must find more user friendly way to add options, perphaps top 10 most popular? -->
             <option value = "Bitcoin">Bitcoin</option>
             <option value = "LiteCoin">Litecoin</option>
           </select>
@@ -46,13 +48,15 @@
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <select id="inputCur2" class="form-control">
-              <option selected>Currency 2</option>
+              <!-- Reuses updateSelector() from buy.js -->
+              <option selected>Currency</option>
             </select>
             </div>
           </div>
         </div>
 
         <div class="form-group">
+          <!-- TODO: Need to error check parse Num only -->
           <label for="Amount">Amount to be converted</label>
           <input class="form-control" id="curAmount" rows="1"></input>
         </div>

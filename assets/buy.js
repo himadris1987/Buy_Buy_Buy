@@ -1,12 +1,17 @@
 $(document).ready(function() {
 
+    // Global functions to store the responses'
+    // The rate for conversion of currencies
     var rate;
+    // The conversiion rate * amount of currency 
     var rateAmount;
+    // Unused delta of currency over 24 hours
     var daychange;
 
     // Checks for Currency Converter available currencies to populate input
     function updateSelector() {
         
+        // Settings for GET currency list found in documentation
         var settings = {
             "async": true,
             "crossDomain": true,
@@ -17,7 +22,7 @@ $(document).ready(function() {
                 "x-rapidapi-key": "2baeb4eca6mshb648eeb18d253bdp1392e1jsnf42824529a45"
             }
         }
-        
+        // In currencies found in response, append for every value and its key (reversed due to response)
         $.ajax(settings).done(function (response) {
             console.log(response);
             var $dropdown = $("#inputCur");
@@ -26,6 +31,7 @@ $(document).ready(function() {
             });
         });
 
+        // In currencies found in response, append for every value and its key (reversed due to response)
         $.ajax(settings).done(function (response) {
             console.log(response);
             var $dropdown = $("#inputCur2");
@@ -35,9 +41,10 @@ $(document).ready(function() {
         });
     };
 
+    // Call to updateSelector()
     updateSelector();
 
-    // function to access euro/usd api
+    // Function on click of "Exchange !" to use InputCur1, InputCur2 and curAmount as queryURL conditions
     $("#exchangeCur").on("click", function() {
 
         var currency1 = $("#inputCur").children("option:selected").val();
@@ -62,6 +69,7 @@ $(document).ready(function() {
         $.ajax(settings).done(function (response) {
         }).then(updatePage);
 
+        // Sets respones' rate and rate_for_amount to rate and rateAmount respectively
         function updatePage(currencyData) {
             console.log(currencyData);
             rate = currencyData.rates.USD.rate;
