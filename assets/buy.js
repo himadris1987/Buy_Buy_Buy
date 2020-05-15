@@ -77,7 +77,7 @@ $(document).ready(function() {
 
     $("#exchangeCry").on("click", function() {
 
-        var currency1 = $("#inputCur").children("option:selected").val();
+        var currency1 = $("#inputCurCry").children("option:selected").val();
         var currency2 = $("#inputCur2").children("option:selected").val();
         var amount = $("#curAmount").val();
 
@@ -108,6 +108,8 @@ $(document).ready(function() {
             console.log(cryptoData);
             rate = cryptoData.bitcoin.usd;
             rateAmount = rate*amount;
+            console.log(rate);
+            console.log(rateAmount);
             daychange = cryptoData.bitcoin.usd_24h_change;
 
         }
