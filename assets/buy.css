@@ -6,7 +6,7 @@ body {
     color: white; /* added in */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* added in */
 }
-
+h1 {background-color: green;}
 .glow-on-hover {
     width: 220px;
     height: 50px;
