@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Buy Buy Buy</title>
+  <!-- Link to reset.css to use bootstrap, link to bootstrap, link to jquery and script.js -->
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/buy.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/buy.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-4 text-center">Buy Buy Buy!</h1>
+      <p class="lead text-center">Currency and Cryptocurrency exchange checker made simple.</p>
+    </div>
+  </div>
+
+    <div class="container mb-4">
+      <ul class="nav nav-pills nav-fill justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Currencies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="crypto.html">Cryptocurrencies</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <select id="inputCur" class="form-control">
+            <!-- Populated with updateSelector() -->
+            <option selected>Currency 1</option>
+          </select>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <select id="inputCur2" class="form-control">
+              <!-- Populated with updateSelector() -->
+              <option selected>Currency 2</option>
+            </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="Amount">Amount to be converted</label>
+          <!-- TODO: Need to error check parse Num only -->
+          <input class="form-control" id="curAmount" rows="1"></input>
+        </div>
+    </div>
+      
+
+    <div class="container">
+      <input class="btn btn-primary btn-lg btn-block" id="exchangeCur" type="submit" value="Exchange!">
+  </div>
+
+</body>
+</html>
