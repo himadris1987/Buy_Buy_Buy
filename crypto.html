@@ -46,16 +46,18 @@
             <option selected>Cryptocurrency</option>
             <!-- Hardcoded options because populating them with GET would be too many
               TODO: Must find more user friendly way to add options, perphaps top 10 most popular? -->
-            <option value = "Bitcoin">Bitcoin</option>
-            <option value = "LiteCoin">Litecoin</option>
+            <option value = "bitcoin">Bitcoin</option>
+            <option value = "litcoin">Litecoin</option>
           </select>
           </div>
         </div>
 
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <select id="inputCur2" class="form-control">
+            <select id="inputCurCry2" class="form-control">
               <!-- Reuses updateSelector() from buy.js -->
+              <option value = "usd">US Dollar</option>
+              <option value = "eur">Euro</option>
               <option selected>Currency</option>
             </select>
             </div>
@@ -73,21 +75,21 @@
     <div class="col-md-4">
     <div class="form-group">
       <label for ="Output">Converted Amount</label>
-      <imput class ="form-control" id="convAmount" rows="1"></imput>
+      <imput class ="form-control" id="convAmountCry" rows="1"></imput>
     </div>
     </div>
 
     <div class="col-md-4">
     <div class="form-group">
       <label for ="Output">Conversion Rates</label>
-      <imput class ="form-control" id="Rate" rows="1"></imput>
+      <imput class ="form-control" id="convRateCry" rows="1"></imput>
     </div>
     </div>
 
     <div class="container">
       <!-- <input class="btn btn-primary btn-lg btn-block" id="exchangeCry" type="submit" value="Exchange!"> -->
       <!-- Spencer greened out original button above ^ -->
-      <button class="btn" id="exchangeCur" type="submit" value="Exchange!" href="this would be the link for the button">See Exchange Rate!</button>
+      <button class="btn" id="exchangeCry" type="submit" value="Exchange!" href="this would be the link for the button">See Exchange Rate!</button>
        
     </div>
 
