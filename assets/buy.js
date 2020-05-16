@@ -2,9 +2,9 @@ $(document).ready(function() {
 
     // Global functions to store the responses'
     // The rate for conversion of currencies
-    var rate;
+    var rate = 0;
     // The conversiion rate * amount of currency 
-    var rateAmount;
+    var rateAmount = 0;
     // Unused delta of currency over 24 hours
     var daychange;
 
@@ -24,7 +24,6 @@ $(document).ready(function() {
         }
         // In currencies found in response, append for every value and its key (reversed due to response)
         $.ajax(settings).done(function (response) {
-            console.log(response);
             var $dropdown = $("#inputCur");
             $.each(response.currencies, function(key, value) {
                 $dropdown.append($("<option />").val(key).text(value))
@@ -72,8 +71,12 @@ $(document).ready(function() {
         // Sets respones' rate and rate_for_amount to rate and rateAmount respectively
         function updatePage(currencyData) {
             console.log(currencyData);
-            rate = currencyData.rates.USD.rate;
-            rateAmount = currencyData.rates.USD.rate_for_amount;
+            // Didn't know how to pass local variables over...
+            var currencyUsed = Object.values(currencyData.rates)[0];
+            console.log(currencyUsed);
+            var rate = currencyUsed.rate;
+            var rateAmount = currencyUsed.rate_for_amount;
+            
             console.log(rate);
             console.log(rateAmount);
 
@@ -114,11 +117,14 @@ $(document).ready(function() {
 
         function updatePage(cryptoData) {
             console.log(cryptoData);
-            rate = cryptoData.bitcoin.usd;
+            var currencyUsed = Object.values(cryptoData)[0]
+            console.log(currencyUsed)
+            rate = Object.values(currencyUsed)[0]
             rateAmount = rate*amount;
             console.log(rate);
             console.log(rateAmount);
-            daychange = cryptoData.bitcoin.usd_24h_change;
+            daychange = Object.values(currencyUsed)[1]
+            console.log(daychange)
 
         }
     });
